@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="WeatherApp.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:WeatherApp.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WeatherApp.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainPage"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <Grid Margin="350,207,0,0">
+        <controls:ImagePickerControl
+            Margin="-126,-67,203,149"
+            ButtonPressedCommand="{Binding PickImageCommand}"
+            ImageSource="{Binding ImageSource}" />
+
+        <Button Margin="62,91,202,57" Command="{Binding NavigateSettingsCommand}">
+            <TextBlock FontSize="25" Text="Ustawienia" />
+        </Button>
+        <Button Margin="-124,91,388,57" Command="{Binding NavigateWeatherCommand}">
+            <TextBlock FontSize="25" Text="Pogoda" />
+        </Button>
+    </Grid>
+</Page>
